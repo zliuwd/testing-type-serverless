@@ -106,8 +106,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var morgan__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(morgan__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _src_schema__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./src/schema */ "./src/schema/index.ts");
 /* harmony import */ var _src_resolvers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./src/resolvers */ "./src/resolvers/index.ts");
-/* harmony import */ var _src_generated_prisma_client_index__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./src/generated/prisma-client/index */ "./src/generated/prisma-client/index.js");
-/* harmony import */ var _src_generated_prisma_client_index__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_src_generated_prisma_client_index__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _src_generated_prisma_client__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./src/generated/prisma-client */ "./src/generated/prisma-client/index.js");
+/* harmony import */ var _src_generated_prisma_client__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_src_generated_prisma_client__WEBPACK_IMPORTED_MODULE_6__);
 
 
 
@@ -124,7 +124,7 @@ const server = new apollo_server_express__WEBPACK_IMPORTED_MODULE_2__["ApolloSer
     typeDefs: _src_schema__WEBPACK_IMPORTED_MODULE_4__["default"],
     resolvers: _src_resolvers__WEBPACK_IMPORTED_MODULE_5__["default"],
     context: {
-        prisma: _src_generated_prisma_client_index__WEBPACK_IMPORTED_MODULE_6__["prisma"]
+        prisma: _src_generated_prisma_client__WEBPACK_IMPORTED_MODULE_6__["prisma"]
     },
     introspection: true,
     playground: true

@@ -1,4 +1,4 @@
-import { prisma } from './src/generated/prisma-client/index';
+import { prisma } from '../src/generated/prisma-client';
 async function main() {
   await prisma.createUser({
     name: "Alice",

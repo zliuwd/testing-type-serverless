@@ -5,7 +5,7 @@ import * as morgan from 'morgan';
 const serverless = require('serverless-http');
 import schema from './src/schema';
 import resolvers from './src/resolvers';
-import { prisma } from './src/generated/prisma-client/index';
+import { prisma } from './src/generated/prisma-client';
 
 
 const app = express();
