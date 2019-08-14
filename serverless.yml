@@ -1,0 +1,44 @@
+service:
+  name: aws-nodejs-typescript
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
+
+custom:
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: dev
+  region: eu-west-1
+
+functions:
+  graphql:
+    handler: index.handler
+    role: ServiceRole
+    events:
+    - http:
+        path: graphql
+        method: post
+        cors: true
+    - http:
+        path: graphql
+        method: get
+  playground:
+    handler: index.handler
+    events:
+      - http:
+          path: playground
+          method: get
+          cors: true
+  restfulTest:
+    handler: index.handler
+    events:
+      - http:
+          path: restful/test
+          method: get
+          cors: true
