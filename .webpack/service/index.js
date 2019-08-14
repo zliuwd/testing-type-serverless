@@ -433,6 +433,16 @@ __webpack_require__.r(__webpack_exports__);
             return 'this is the graphql return msg!';
         },
         users: (parent, args, ctx, info) => ctx.prisma.users()
+    },
+    Mutation: {
+        signUp: (parent, { name, email }, ctx, info) => {
+            const newUser = ctx.prisma.createUser({
+                name,
+                email
+            });
+            return newUser;
+        },
+        deleteUser: (parent, args, ctx, info) => ctx.prisma.deleteUser({ id: args.id })
     }
 });
 
@@ -492,9 +502,17 @@ __webpack_require__.r(__webpack_exports__);
   }
 
   extend type Query {
-      users: [User!]
+      users: [User]
       user(id: ID!): User
     }
+    extend type Mutation {
+        signUp(
+          name: String!
+          email: String!
+        ): User!
+        
+        deleteUser(id: ID!): User!
+      }
 
     type User {
       id: ID!
