@@ -6,7 +6,7 @@
 3. `prisma deploy`
 3. `yarn start`
 
-## Graphql test api
+## GraphQL test api
 http://localhost:4000/playground
 
 ## Restful api
