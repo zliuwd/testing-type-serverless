@@ -15,13 +15,13 @@ app.use(require('./restful'));
 app.disable('etag');
 
 const server = new ApolloServer({
-    typeDefs: schema,
-    resolvers,
-    context: {
-        prisma,
-    },
-    introspection: true,
-    playground: true,
+  typeDefs: schema,
+  resolvers,
+  context: {
+    prisma,
+  },
+  introspection: true,
+  playground: true,
 });
 
 server.applyMiddleware({ app });
