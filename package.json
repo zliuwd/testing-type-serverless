@@ -5,7 +5,7 @@
     "main": "handler.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "sls offline start --port 4000",
+        "dev": "sls offline start --port 4000",
         "docker-stop": "docker kill $(docker ps -q)",
         "prisma-up": "docker-compose up -d",
         "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
