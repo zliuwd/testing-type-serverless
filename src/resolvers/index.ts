@@ -1,4 +1,3 @@
-import testResolvers from './test';
-import crudResolvers from './test';
+import userResolvers from './user';
 
-export default [testResolvers, crudResolvers];
+export default [userResolvers];

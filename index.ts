@@ -2,15 +2,16 @@ import * as express from 'express';
 import graphiql from 'graphql-playground-middleware-express';
 import { ApolloServer } from 'apollo-server-express';
 import * as morgan from 'morgan';
-const serverless = require('serverless-http');
+import serverless = require('serverless-http');
 import schema from './src/schema';
 import resolvers from './src/resolvers';
 import { prisma } from './src/generated/prisma-client';
+import restfulRoutes from './src/restful/routes';
 
-const app = express();
+export const app = express();
 app.use(morgan('dev'));
 
-app.use(require('./restful'));
+app.use(restfulRoutes);
 
 app.disable('etag');
 

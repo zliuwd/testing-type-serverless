@@ -5,9 +5,5 @@ generate:
   - generator: typescript-client
     output: ../src/generated/prisma-client/
 
-hooks:
-  post-deploy:
-    - prisma generate
-
 seed:
-  run: yarn ts-node ./seed.ts
+  run: yarn ts-node ./src/seed.ts
